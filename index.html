@@ -10,13 +10,19 @@ p {
 }
 </style>
 </head>
-<body>
+<body bgcolor="black">
 
-<p id="demo"></p>
+<center>
+  <br>
+  <br>
+  <h1 style="font-family: 'Courier New', sans-serif; color:red">SLAP SCHEDULED</h1>
+  <p id="demo" style="font-family: 'Courier New', sans-serif; color:red"></p>
+  <img id="myPicture" width="600">
+</center>
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+var countDownDate = new Date("Oct 09, 2022 18:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -34,8 +40,9 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  
+  document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+  + minutes + " : " + seconds;
     
   // If the count down is over, write some text 
   if (distance < 0) {
@@ -44,6 +51,24 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
+
+<script>
+  var myPix = new Array(
+    "images/001.jpeg",
+    "images/002.jpeg",
+    "images/003.jpeg",
+    "images/004.jpeg",
+    "images/005.jpeg",
+    "images/006.jpeg",
+    "images/007.gif",
+    "images/008.gif"
+
+    );
+
+  var randomNum = Math.floor(Math.random() * myPix.length);
+  document.getElementById("myPicture").src = myPix[randomNum];
+</script>
+  
 
 </body>
 </html>
